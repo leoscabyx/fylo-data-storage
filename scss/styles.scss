@@ -12,6 +12,229 @@ $fontFamily: 'Raleway', sans-serif;
 
 @debug $fontFamily;
 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+
+    height: 100vh;
+    padding: 0 1rem;
+    background-color: $colorOscuroSecundario;
+    background-image: url('../images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-size: $fontSize;
+    font-family: $fontFamily;
+    
+}
+
+.contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    
+    padding: 2rem;
+    background-color: $colorOscuroPrimario;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    
+}
+
+.card--relative {
+    position: relative;
+}
+
+.card__logo-contenedor {
+    margin-bottom: 1.5rem;
+}
+
+.card:first-child {
+    border-top-right-radius: 100px;
+}
+
+.card__items {
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}
+
+.card__item {
+    
+    
+    flex: 0 0 45px;
+    height: 45px;
+    margin-right: 1rem;
+    border-radius: 10px;
+    background-color: $colorOscuroSecundario;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__link {
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card__mensaje {
+
+    margin-bottom: 10px;
+    color: $colorFondo;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
+
+.card__barra-contenedor {
+    border-radius: 10px;
+    background-color: $colorOscuroSecundario;
+    padding: 2px;
+}
+
+.card__barra {
+
+    width: 75%;
+    height: 12px;
+    padding: 2px;
+    background-image: linear-gradient(to right, $colorPrimario, $colorSecundario);
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.card__barra::after {
+
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+   
+    border-radius: 50%;
+    background-color: $colorFondo;
+}
+
+.card__capacidad-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__capacidad-item {
+
+    padding: 10px 0;
+    color: $colorFondo;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card__disponible {
+    
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    padding: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: #fff;
+    color: $colorSeparador;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__disponible-size {
+
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 32px;
+    color: $colorOscuroSecundario;
+}
+
+
+@media screen and (min-width:769px) {
+
+    body {
+        
+        background-image: url('../images/bg-desktop.png');
+        background-position: left bottom;
+        background-size: 100% 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .contenido {
+        max-width: 80vw;
+        height: auto;
+        flex-direction: row; 
+        align-items: flex-end;
+    }
+
+    .card {
+        flex: 0 0 300px;
+        margin-bottom: 0;
+    }
+    
+    .card:first-child {
+        margin-right: 2rem;
+    }
+
+    .card:nth-child(2) {
+        flex-grow: 1;
+        flex-shrink: 1;
+        
+    }
+
+    .card__disponible {
+        right: 0;
+        top: -50%;
+        left: unset;
+        bottom: unset;
+        padding: 1rem;
+        transform: translateY(50%) translateX(-2rem);
+        border-bottom-right-radius: 0;
+    }
+
+    .card__disponible::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: -20px;
+        right: 0;
+        border-top-width: 20px;
+        border-top-style: solid;
+        border-top-color: #fff;
+        border-left-width: 20px;
+        border-left-style: solid;
+        border-left-color: transparent;
+        
+        z-index: 10;
+        
+    }
+
+    .card__mensaje {
+        text-align: left;
+    }
 }

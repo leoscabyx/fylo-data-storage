@@ -8,29 +8,37 @@
   
   <title>Frontend Mentor | Fylo data storage component</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
  
 </head>
 <body>
 
-  <div class="card">
-    <div>
-      <img class="card-img" src="images/logo.svg" alt="">
-    </div>
-    <ul class="card__items">
-      <li><a href="#"><img src="" alt=""></a></li>
-      <li><a href="#"><img src="" alt=""></a></li>
-      <li><a href="#"><img src="" alt=""></a></li>
-    </ul>
-  </div>
 
-  <div class="card">
-    <h2>You've used <strong>815 GB</strong> of your storage</h2>
-    <div>
-
+  <div class="contenido">
+    <div class="card">
+      <div class="card__logo-contenedor">
+        <img class="card-logo" src="./images/logo.svg" alt="">
+      </div>
+      <ul class="card__items">
+        <li class="card__item"><a class="card__link" href="#"><img src="./images/icon-document.svg" alt=""></a></li>
+        <li class="card__item"><a class="card__link" href="#"><img src="./images/icon-folder.svg" alt=""></a></li>
+        <li class="card__item"><a class="card__link" href="#"><img src="./images/icon-upload.svg" alt=""></a></li>
+      </ul>
     </div>
-    <div>
-      185 gb left
+
+    <div class="card card--relative">
+      <h2 class="card__mensaje">You've used <strong>815 GB</strong> of your storage</h2>
+      <div class="card__barra-contenedor">
+        <div class="card__barra">
+        </div>
+      </div>
+      <div class="card__capacidad-container">
+        <span class="card__capacidad-item">0 gb</span>
+        <span class="card__capacidad-item">1000 gb</span>
+      </div>
+      <div class="card__disponible">
+        <span class="card__disponible-size">185</span> gb left
+      </div>
     </div>
   </div>
 
