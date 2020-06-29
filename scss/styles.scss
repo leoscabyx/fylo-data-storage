@@ -1,0 +1,17 @@
+$colorPrimario: hsl(6, 100%, 80%);
+$colorSecundario: hsl(335, 100%, 65%);
+
+$colorFondo: hsl(243, 100%, 93%);
+$colorSeparador: hsl(229, 7%, 55%);
+$colorOscuroPrimario: hsl(228, 56%, 26%);
+$colorOscuroSecundario: hsl(229, 57%, 11%);
+
+$fontSize: 14px;
+
+$fontFamily: 'Raleway', sans-serif;
+
+@debug $fontFamily;
+
+body {
+    font-size: $fontSize;
+}
